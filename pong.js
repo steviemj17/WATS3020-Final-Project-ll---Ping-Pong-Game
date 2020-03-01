@@ -6,7 +6,7 @@ const user = {
     y: cvs.height / 2 - 100 / 2,
     width: 10,
     height: 100,
-    color: "BLACK",
+    color: "#0033FF",
     score: 0
 }
 
@@ -15,7 +15,7 @@ const com = {
     y: cvs.height / 2 - 100 / 2,
     width: 10,
     height: 100,
-    color: "BLACK",
+    color: "#CC0066",
     score: 0
 }
 
@@ -26,7 +26,7 @@ const ball = {
     speed: 5,
     velocityX: 5,
     velocityY: 5,
-    color: "BLACK"
+    color: "#F9E79F"
 }
 
 function drawRect(x, y, w, h, color) {
@@ -65,11 +65,11 @@ function drawText(text, x, y, color) {
 
 function render() {
 
-    drawRect(0, 0, cvs.width, cvs.height, "SILVER");
+    drawRect(0, 0, cvs.width, cvs.height, "#33CC00");
     drawNet();
 
-    drawText(user.score, cvs.width / 4, cvs.height / 5, "BLACK");
-    drawText(com.score, 3 * cvs.width / 4, cvs.height / 5, "BLACK");
+    drawText(user.score, cvs.width / 4, cvs.height / 5, "#0033FF");
+    drawText(com.score, 3 * cvs.width / 4, cvs.height / 5, "#FF0066");
 
     drawRect(user.x, user.y, user.width, user.height, user.color);
     drawRect(com.x, com.y, com.width, com.height, com.color);
